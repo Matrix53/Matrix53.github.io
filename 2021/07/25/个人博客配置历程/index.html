@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
@@ -9,16 +9,30 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/global/favicon.png">
   <link rel="icon" href="/img/global/favicon.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一直有搭建个人博客的想法，早早就买好了域名和服务器。但奈何大二下学期课业压力实在太大，一直没有足够的空闲时间搭建博客，于是大二暑假先玩了一段时间，然后着手搭建个人博客。">
   <meta name="author" content="Matrix53">
   <meta name="keywords" content="逻辑,技术,IT,思维,前端,美">
+  
+    <meta name="description" content="一直有搭建个人博客的想法，早早就买好了域名和服务器。但奈何大二下学期课业压力实在太大，一直没有足够的空闲时间搭建博客，于是大二暑假先玩了一段时间，然后着手搭建个人博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客配置历程">
+<meta property="og:url" content="https://blog.matrix53.top/2021/07/25/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E5%8E%86%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Matrix53 的博客">
+<meta property="og:description" content="一直有搭建个人博客的想法，早早就买好了域名和服务器。但奈何大二下学期课业压力实在太大，一直没有足够的空闲时间搭建博客，于是大二暑假先玩了一段时间，然后着手搭建个人博客。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.matrix53.top/img/chore/hexo_logo_index.png">
+<meta property="article:published_time" content="2021-07-25T01:11:04.000Z">
+<meta property="article:modified_time" content="2021-08-19T03:47:31.756Z">
+<meta property="article:author" content="Matrix53">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.matrix53.top/img/chore/hexo_logo_index.png">
+  
   
   <title>个人博客配置历程 - Matrix53 的博客</title>
 
@@ -41,7 +55,6 @@
   
 
 
-
 <!-- 主题依赖的图标库，不要自行修改 -->
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
@@ -58,19 +71,20 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 6.0.0"></head>
 
 
 <body>
   <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Matrix53</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Matrix53</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -156,13 +170,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -196,21 +211,18 @@
 
 <div class="mt-1">
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      982 字
+      1.6k 字
     </span>
   
 
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
-       分钟
+      14 分钟
     </span>
   
 
@@ -256,9 +268,9 @@
               </p>
             
             <div class="markdown-body">
-              <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+              <h2 id="前言-3">前言</h2>
 <p>一直有搭建个人博客的想法，早早就买好了域名和服务器。但奈何大二下学期课业压力实在太大，一直没有足够的空闲时间搭建博客，于是大二暑假先玩了一段时间，然后着手搭建个人博客。</p>
-<h2 id="博客框架的选择"><a class="markdownIt-Anchor" href="#博客框架的选择"></a> 博客框架的选择</h2>
+<h2 id="博客框架的选择">博客框架的选择</h2>
 <p>目前比较火的博客框架有 WordPress、Jekyll、Hexo 等，下面简单罗列一下这些框架的优势劣势：</p>
 <ul>
 <li><strong>WordPress</strong>：经典博客框架，插件和主题非常丰富，操作简单直白，但是需要购买云服务器进行部署，访问速度受限于云服务器带宽</li>
@@ -266,19 +278,19 @@
 <li><strong>Hexo</strong>：渲染速度比 Jekyll 快，可以通过静态页面的形式直接部署到 Git page 上，不需要购买服务器，有中文文档</li>
 </ul>
 <p>最终，我选择了 Hexo 进行个人博客的搭建，将个人博客的静态文件部署到 Git page 上，关于 Git page 及 Github 的其他功能，详见我的另一篇文章<a href="/2021/07/25/Github%E6%8E%A2%E7%A7%98/" title="Github探秘">Github探秘</a>。</p>
-<p><img src="/img/chore/hexo_logo_index.png" srcset="/img/loading.gif" lazyload alt="Hexo的logo" /></p>
-<h2 id="博客主题的选择"><a class="markdownIt-Anchor" href="#博客主题的选择"></a> 博客主题的选择</h2>
+<p><img src="/img/chore/hexo_logo_index.png" srcset="/img/loading.gif" lazyload alt="Hexo的logo"></p>
+<h2 id="博客主题的选择">博客主题的选择</h2>
 <p>主题方面，我是直接到了 Github 找高 Star 的主题，最终选到了 Fluid 这一款主题。事实上，我友链里的博客很多也用了这一款主题，看来大家的审美差不多（x</p>
 <p>主题挑选有两个主要途径，一个是去 Github 上以<strong>hexo-theme</strong>作为关键词进行搜索，另一个是去 Hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题商城</a>进行挑选。</p>
 <p>关于主题和博客框架的配置，各个主题的官网以及博客框架的官网都有很详细的教程，还可以在各大搜索引擎搜索，这里就不赘述了。</p>
-<h2 id="评论方案的选择"><a class="markdownIt-Anchor" href="#评论方案的选择"></a> 评论方案的选择</h2>
+<h2 id="评论方案的选择">评论方案的选择</h2>
 <p>评论方面，由于 Hexo 博客是无后端的静态页面，所以需要借助外部 API 来配置评论功能。大体来说外部 API 分为两种，一种是基于 Github 上的 issue 进行评论的方案，另一种是基于各大 BaaS 供应商提供的服务。我选择的是基于 Github issue 的 utterances 评论方案，该方案的特点是免费开源、使用 Github 账号进行评论、文章和 Github issue 绑定、可直接访问评论者的 Github 主页。</p>
 <ul>
 <li>基于 Github 上的 issue 的方案：<a target="_blank" rel="noopener" href="https://github.com/utterance/utterances">utterances</a>、<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">gitalk</a>等</li>
 <li>基于 BaaS 供应商的方案：<a target="_blank" rel="noopener" href="https://valine.js.org/">valine</a>、<a target="_blank" rel="noopener" href="https://waline.js.org/">waline</a>、<a target="_blank" rel="noopener" href="https://disqus.com/">disqus</a>等</li>
 </ul>
 <p>另外，如果使用的是 Fluid 主题，那么 Fluid 主题的官网和配置文件里有很详细的评论配置方案。</p>
-<h2 id="公式渲染器的选择"><a class="markdownIt-Anchor" href="#公式渲染器的选择"></a> 公式渲染器的选择</h2>
+<h2 id="公式渲染器的选择">公式渲染器的选择</h2>
 <p>原生的 Hexo 框架不支持渲染 Latex，但是可以通过安装插件的方法支持 Latex 语法。相关插件包括但不限于以下几个，我安装的插件是 markdown-it-plus。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-math">hexo-math</a>：同时支持 Katex 和 Mathjax，是 Hexo 的官方数学公式插件</li>
@@ -286,7 +298,7 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/sun11/hexo-renderer-kramed">hexo-renderer-kramed</a>：支持 Mathjax，Fluid 主题推荐方案之一</li>
 </ul>
 <p>另外，Latex 是一套排版语言，而 Katex 和 Mathjax 是渲染 Latex 的引擎。Katex 更为轻量，而 Mathjax 能渲染更复杂的数学符号，日常使用来说 Katex 就够用了。</p>
-<h2 id="相关链接"><a class="markdownIt-Anchor" href="#相关链接"></a> 相关链接</h2>
+<h2 id="相关链接-3">相关链接</h2>
 <p>下面是我搭建博客时查阅的一些链接，以供读者参考：</p>
 <ul>
 <li>Hexo 框架官网：<a target="_blank" rel="noopener" href="https://hexo.io">https://hexo.io</a></li>
@@ -294,7 +306,7 @@
 <li>utterances 评论方案仓库：<a target="_blank" rel="noopener" href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a></li>
 <li>markdown-it-plus 渲染器仓库：<a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus</a></li>
 </ul>
-<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" srcset="/img/loading.gif" lazyload alt="Matrix53的微信赞赏码" /></p>
+<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" srcset="/img/loading.gif" lazyload alt="Matrix53的微信赞赏码"></p>
 
             </div>
             <hr>
@@ -402,7 +414,7 @@
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -493,6 +505,10 @@
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -503,23 +519,18 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+  
 
 
 
@@ -534,7 +545,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>
