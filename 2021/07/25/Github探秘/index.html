@@ -73,7 +73,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -280,7 +280,7 @@
 </ul>
 <p>一个容易想到的 Github Actions 用途就是自动部署，在成员向指定仓库 push 之后，可以利用临时服务器进行源代码的编译，并将要部署的文件传到自己的服务器上。从某种意义上来说，Github Actions 有点像钩子函数，只不过这个钩子函数的功能非常强大。</p>
 <p>关于 Github Actions 入门及脚本编写，可以看这个<a target="_blank" rel="noopener" href="https://docs.github.com/en/actions">官方文档</a>。</p>
-<p><img src="/img/chore/github_action.png" alt="Github Actions"></p>
+<p><img src="/img/chore/github_action.png" srcset="/img/loading.gif" lazyload alt="Github Actions"></p>
 <h2 id="Github-Apps">Github Apps</h2>
 <p>Github Apps 和 Github Actions 比较类似，你可以在 Github 顶栏的<strong>Marketplace</strong>里同时找到这两项 Github 提供的功能。如果要说 Apps 和 Actions 的不同的话，我认为体现在<strong>集成度</strong>上面，Apps 的功能更为直接和完善，开箱即用。Apps 就好像给编辑器安装的插件，而 Actions 就好像给编辑器写的脚本。基于 Github Apps，你可以实现但不限于以下几件事（事实上，这只是冰山一角）：</p>
 <ul>
@@ -291,7 +291,7 @@
 <div class="note note-secondary">
             <p>关于 Actions 和 Apps，读者可以在 Github 的<a target="_blank" rel="noopener" href="https://github.com/marketplace">Marketplace</a>上尽情探索。</p>
           </div>
-<p><img src="/img/chore/github_app.png" alt="Github Apps"></p>
+<p><img src="/img/chore/github_app.png" srcset="/img/loading.gif" lazyload alt="Github Apps"></p>
 <h2 id="Github-Pages">Github Pages</h2>
 <p>Github Pages 是一个用于网页展示的功能，于<strong>2008 年</strong>推出，世界上的任何一个人，都能通过 Github 展示自己的网页。可以利用 Github Pages 进行个人博客托管、项目成果展示等，<a href="https://blog.matrix53.top">我的个人博客</a>就是利用 Github Pages 进行部署的，免去了购买服务器的费用。</p>
 <p>具体来说，想要使用 Github Pages，必须建立一个名为 <a target="_blank" rel="noopener" href="http://username.github.io">username.github.io</a> 的仓库（其中的 username 为用户名），然后在该仓库的设置中打开 Pages 服务，这里就不赘述了。需要注意的是，不是只有该仓库才能启用 Github Pages 服务，其他仓库也能启用 Pages 服务。</p>
@@ -305,7 +305,7 @@
 <li>Github Pages 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/en/pages">https://docs.github.com/en/pages</a></li>
 <li>Github 功能总文档：<a target="_blank" rel="noopener" href="https://docs.github.com/en">https://docs.github.com/en</a></li>
 </ul>
-<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" alt="Matrix53的微信赞赏码"></p>
+<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" srcset="/img/loading.gif" lazyload alt="Matrix53的微信赞赏码"></p>
 
             </div>
             <hr>
@@ -363,7 +363,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments">
+              <article class="comments" id="comments" lazyload>
                 
                   
                 
@@ -513,6 +513,10 @@
   <script  src="/js/local-search.js" ></script>
 
 
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
