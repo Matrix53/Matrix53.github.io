@@ -73,7 +73,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.matrix53.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"pel57WAJITy5XdQe8V6fpT70-gzGzoHsz","app_key":"G4sEBjAk4dmemxKj675Vse7I","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -280,7 +280,7 @@
 <li><strong>Hexo</strong>：渲染速度比 Jekyll 快，可以通过静态页面的形式直接部署到 Git page 上，不需要购买服务器，有中文文档</li>
 </ul>
 <p>最终，我选择了 Hexo 进行个人博客的搭建，将个人博客的静态文件部署到 Git page 上，关于 Git page 及 Github 的其他功能，详见我的另一篇文章<a href="/2021/07/25/Github%E6%8E%A2%E7%A7%98/" title="Github探秘">Github探秘</a>。</p>
-<p><img src="/img/chore/hexo_logo_index.png" alt="Hexo的logo"></p>
+<p><img src="/img/chore/hexo_logo_index.png" srcset="/img/loading.gif" lazyload alt="Hexo的logo"></p>
 <h2 id="博客主题的选择">博客主题的选择</h2>
 <p>主题方面，我是直接到了 Github 找高 Star 的主题，最终选到了 Fluid 这一款主题。事实上，我友链里的博客很多也用了这一款主题，看来大家的审美差不多（x</p>
 <p>主题挑选有两个主要途径，一个是去 Github 上以<strong>hexo-theme</strong>作为关键词进行搜索，另一个是去 Hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题商城</a>进行挑选。</p>
@@ -308,7 +308,7 @@
 <li>utterances 评论方案仓库：<a target="_blank" rel="noopener" href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a></li>
 <li>markdown-it-plus 渲染器仓库：<a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus</a></li>
 </ul>
-<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" alt="Matrix53的微信赞赏码"></p>
+<p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img src="/img/global/wxQRcode_pay.png" srcset="/img/loading.gif" lazyload alt="Matrix53的微信赞赏码"></p>
 
             </div>
             <hr>
@@ -360,7 +360,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments">
+              <article class="comments" id="comments" lazyload>
                 
                   
                 
@@ -510,6 +510,10 @@
   <script  src="/js/local-search.js" ></script>
 
 
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
