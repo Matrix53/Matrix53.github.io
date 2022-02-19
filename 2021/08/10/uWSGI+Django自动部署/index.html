@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.matrix53.top/img/chore/django_logo_index.jpg">
 <meta property="article:published_time" content="2021-08-10T12:07:17.000Z">
-<meta property="article:modified_time" content="2021-08-19T03:47:31.756Z">
+<meta property="article:modified_time" content="2022-02-19T09:26:13.943Z">
 <meta property="article:author" content="Matrix53">
 <meta property="article:tag" content="运维">
 <meta name="twitter:card" content="summary_large_image">
@@ -265,12 +265,12 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年8月19日 中午
+                  本文最后更新于：2022年2月19日 下午
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="前言-2">前言</h2>
+              <h2 id="前言-3">前言</h2>
 <blockquote>
 <p>博客近半月没有更新，一位好友前来催更，于是有了这篇文章（bushi</p>
 </blockquote>
@@ -301,7 +301,7 @@
 <p>在 uwsgi.ini 文件中输入配置后，就可以 cd 到项目根目录下，使用<code>uwsgi --ini uwsgi.ini</code>的方式启动 uWSGI 了。</p>
 <h3 id="处理请求前缀">处理请求前缀</h3>
 <p>若通过上述配置文件部署 Django，那么请求的前缀不会被自动去掉，即 Nginx 虽然将<strong><a target="_blank" rel="noopener" href="https://ip:443/api/request">https://ip:443/api/request</a></strong>这个请求传递给了 Django，但是 Django 会将这个请求的 url 解析为 api/request 而不是 request。</p>
-<p>一种 Nginx 推荐的解决问题的方法是 Nginx 给 uWSGI 传递参数，uWSGI 根据参数去除请求前缀，向配置文件中添加如下配置即可：</p>
+<p>Nginx 官方推荐的解决方案是 Nginx 给 uWSGI 传递参数，uWSGI 根据参数去除请求前缀，向配置文件中添加如下配置即可：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs plain"># Nginx配置文件部分内容<br>location /api &#123;<br>  ... # 表示其他配置，实际文件中不是省略号<br>  uwsgi_param SCRIPT_NAME /api; # 表示需要去掉api前缀<br>&#125;<br></code></pre></div></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs plain"># uWSGI配置文件<br>... # 表示其他配置，实际文件中不是省略号<br>route-run = fixpathinfo: # 根据参数去除请求前缀<br></code></pre></div></td></tr></table></figure>
 <h3 id="Github-Action-自动部署">Github Action 自动部署</h3>
@@ -318,7 +318,7 @@
 <figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [<span class="hljs-string">main</span>]<br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">setup</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">sudo</span> <span class="hljs-string">apt</span> <span class="hljs-string">install</span> <span class="hljs-string">sshpass</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">pull</span> <span class="hljs-string">and</span> <span class="hljs-string">reload</span><br>        <span class="hljs-attr">env:</span><br>          <span class="hljs-attr">DST:</span> <span class="hljs-string">$&#123;&#123;secrets.DST_FOLDER&#125;&#125;</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">sshpass</span> <span class="hljs-string">-p</span> <span class="hljs-string">$&#123;&#123;secrets.PASSWORD&#125;&#125;</span> <span class="hljs-string">ssh</span> <span class="hljs-string">-o</span> <span class="hljs-string">StrictHostKeyChecking=no</span> <span class="hljs-string">$&#123;&#123;secrets.USER&#125;&#125;@$&#123;&#123;secrets.IP&#125;&#125;</span> <span class="hljs-string">&quot;cd $&#123;DST&#125;; git pull; uwsgi --reload uwsgi.pid&quot;</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="结语">结语</h2>
 <p>至此，Nginx+uWSGI 部署 Django 项目的大致流程就介绍完了。读者在自己的服务器上实践可能会遇到一些坑，建议在<a target="_blank" rel="noopener" href="https://www.google.com.hk/">Google</a>或者<a target="_blank" rel="noopener" href="https://stackoverflow.com/">StackOverflow</a>上查询相关答案，或者在下方留言区写下您遇到的问题。</p>
-<h2 id="相关链接-2">相关链接</h2>
+<h2 id="相关链接-3">相关链接</h2>
 <ul>
 <li>Github Actions 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/en/actions">https://docs.github.com/en/actions</a></li>
 <li>uWSGI 官方文档：<a target="_blank" rel="noopener" href="https://uwsgi-docs.readthedocs.io/en/latest/">https://uwsgi-docs.readthedocs.io/en/latest/</a></li>
