@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.matrix53.top/img/AI/ai_index.jpg">
 <meta property="article:published_time" content="2022-04-18T13:54:52.000Z">
-<meta property="article:modified_time" content="2022-04-18T14:14:07.992Z">
+<meta property="article:modified_time" content="2022-04-18T16:59:31.559Z">
 <meta property="article:author" content="Matrix53">
 <meta property="article:tag" content="逻辑,技术,IT,思维,前端,美">
 <meta name="twitter:card" content="summary_large_image">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.8k 字
+      5.6k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      40 分钟
+      47 分钟
     </span>
   
 
@@ -253,7 +253,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月18日 晚上
+                  本文最后更新于：2022年4月19日 凌晨
                 
               </p>
             
@@ -374,7 +374,17 @@ alt="绘图窗口的切分" /></p></li>
 <img src="/img/AI/plot_5.png" srcset="/img/loading.gif" lazyload alt="灰度图的显示" width="50%"/></p></li>
 </ul>
 <h3 id="octavematlab-的流程控制">Octave/Matlab 的流程控制</h3>
-<p>尚待施工</p>
+<ul>
+<li><p>Matlab/Octave 的循环语句：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs matlab"><span class="hljs-comment">% 初始化 10×1 的零向量</span><br>v = <span class="hljs-built_in">zeros</span>(<span class="hljs-number">10</span>,<span class="hljs-number">1</span>)<br><span class="hljs-comment">% for 循环的基础语法</span><br><span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span>=<span class="hljs-number">1</span>:<span class="hljs-number">10</span>,<br>  v(<span class="hljs-built_in">i</span>)=<span class="hljs-number">2</span>^<span class="hljs-built_in">i</span>;<br><span class="hljs-keyword">end</span>;<br><span class="hljs-comment">% while 循环的基础语法</span><br><span class="hljs-built_in">i</span> = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">while</span> <span class="hljs-built_in">i</span>&lt;= <span class="hljs-number">5</span>,<br>  v(<span class="hljs-built_in">i</span>) = <span class="hljs-number">100</span>;<br>  <span class="hljs-built_in">i</span> = <span class="hljs-built_in">i</span>+<span class="hljs-number">1</span>;<br>  <span class="hljs-keyword">break</span>;<br><span class="hljs-keyword">end</span>;<br></code></pre></div></td></tr></table></figure></li>
+<li><p>Matlab/Octave 的分支语句：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs matlab"><span class="hljs-comment">% 初始化 a</span><br>a = <span class="hljs-number">3</span>;<br><span class="hljs-comment">% if 语句的基础语法</span><br><span class="hljs-keyword">if</span> a==<span class="hljs-number">3</span>,<br>  <span class="hljs-built_in">disp</span>(<span class="hljs-string">&#x27;a is 3&#x27;</span>) <span class="hljs-comment">% 末尾可以加;</span><br><span class="hljs-keyword">elseif</span> a==<span class="hljs-number">4</span>,<br>  <span class="hljs-built_in">disp</span>(<span class="hljs-string">&#x27;a is 4&#x27;</span>)<br><span class="hljs-keyword">else</span><br>  <span class="hljs-built_in">disp</span>(<span class="hljs-string">&#x27;a is not 3 or 4&#x27;</span>)<br><span class="hljs-keyword">end</span>;<br></code></pre></div></td></tr></table></figure></li>
+<li><p>Matlab/Octave 的函数定义：</p>
+<div class="note note-secondary">
+            <p>Matlab/Octave一般将函数定义在单独的文件中，暴露出的函数名必须与文件名一致。</p><p>Matlab/Octave 的 REPL 存在搜索路径的概念，REPL可以使用搜索路径下<code>.m</code>文件中的函数，搜索路径包括<code>pwd</code>。</p><p>另外，还可使用匿名函数、inline命令等来定义函数，下文的函数定义均在<code>.m</code>文件中进行。</p>
+          </div>
+<figure class="highlight matlab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs matlab"><span class="hljs-comment">% squareThisNumber.m</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[y]</span> = <span class="hljs-title">squareThisNumber</span><span class="hljs-params">(x)</span></span><br>  y = x^<span class="hljs-number">2</span>;<br><span class="hljs-keyword">end</span><br><span class="hljs-comment">% REPL</span><br>addpath(<span class="hljs-string">&#x27;path/to/squareThisNumber.m&#x27;</span>) <span class="hljs-comment">% 将函数添加到搜索路径</span><br>squareThisNumber(<span class="hljs-number">3</span>) <span class="hljs-comment">% 调用函数，结果为9</span><br><span class="hljs-comment">% squareAndCubeThisNumber.m</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[y1,y2]</span> = <span class="hljs-title">squareAndCubeThisNumber</span><span class="hljs-params">(x)</span></span><br>  y1 = x^<span class="hljs-number">2</span>;<br>  y2 = x^<span class="hljs-number">3</span>;<br><span class="hljs-keyword">end</span><br><span class="hljs-comment">% REPL</span><br>addpath(<span class="hljs-string">&#x27;path/to/squareAndCubeThisNumber.m&#x27;</span>) <span class="hljs-comment">% 将函数添加到搜索路径</span><br>[a,b] = squareAndCubeThisNumber(<span class="hljs-number">3</span>) <span class="hljs-comment">% 调用函数，a=9,b=27</span><br></code></pre></div></td></tr></table></figure></li>
+</ul>
 <h3 id="tips-将计算向量化">Tips: 将计算向量化</h3>
 <p>尚待施工</p>
 <h2 id="参考资料">参考资料</h2>
