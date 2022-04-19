@@ -25,13 +25,13 @@
 <meta property="og:site_name" content="Matrix53 的博客">
 <meta property="og:description" content="机器学习课程第2周的笔记，本周的内容包括多变量线性回归、解析法计算参数、Octave 语法入门三部分。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://blog.matrix53.top/img/AI/ai_index.jpg">
+<meta property="og:image" content="https://blog.matrix53.top/img/AI/ai_index_1.jpg">
 <meta property="article:published_time" content="2022-04-18T13:54:52.000Z">
-<meta property="article:modified_time" content="2022-04-18T16:59:31.559Z">
+<meta property="article:modified_time" content="2022-04-19T07:08:12.886Z">
 <meta property="article:author" content="Matrix53">
 <meta property="article:tag" content="逻辑,技术,IT,思维,前端,美">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.matrix53.top/img/AI/ai_index.jpg">
+<meta name="twitter:image" content="https://blog.matrix53.top/img/AI/ai_index_1.jpg">
   
   
     <link rel="alternate" type="application/atom+xml" title="Matrix53 的博客" href="https://blog.matrix53.top/atom.xml">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.6k 字
+      5.7k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      47 分钟
+      48 分钟
     </span>
   
 
@@ -253,7 +253,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月19日 凌晨
+                  本文最后更新于：2022年4月19日 下午
                 
               </p>
             
@@ -386,7 +386,10 @@ alt="绘图窗口的切分" /></p></li>
 <figure class="highlight matlab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs matlab"><span class="hljs-comment">% squareThisNumber.m</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[y]</span> = <span class="hljs-title">squareThisNumber</span><span class="hljs-params">(x)</span></span><br>  y = x^<span class="hljs-number">2</span>;<br><span class="hljs-keyword">end</span><br><span class="hljs-comment">% REPL</span><br>addpath(<span class="hljs-string">&#x27;path/to/squareThisNumber.m&#x27;</span>) <span class="hljs-comment">% 将函数添加到搜索路径</span><br>squareThisNumber(<span class="hljs-number">3</span>) <span class="hljs-comment">% 调用函数，结果为9</span><br><span class="hljs-comment">% squareAndCubeThisNumber.m</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[y1,y2]</span> = <span class="hljs-title">squareAndCubeThisNumber</span><span class="hljs-params">(x)</span></span><br>  y1 = x^<span class="hljs-number">2</span>;<br>  y2 = x^<span class="hljs-number">3</span>;<br><span class="hljs-keyword">end</span><br><span class="hljs-comment">% REPL</span><br>addpath(<span class="hljs-string">&#x27;path/to/squareAndCubeThisNumber.m&#x27;</span>) <span class="hljs-comment">% 将函数添加到搜索路径</span><br>[a,b] = squareAndCubeThisNumber(<span class="hljs-number">3</span>) <span class="hljs-comment">% 调用函数，a=9,b=27</span><br></code></pre></div></td></tr></table></figure></li>
 </ul>
 <h3 id="tips-将计算向量化">Tips: 将计算向量化</h3>
-<p>尚待施工</p>
+<ul>
+<li>Matlab、Octave、Python
+等语言都有内置的或者第三方的高性能计算库，这些库对矩阵运算做了特别的优化，在实现模型时使用矩阵进行运算往往能提高效率。</li>
+</ul>
 <h2 id="参考资料">参考资料</h2>
 <ul>
 <li>Coursera：Andrew Ng<a
