@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://matrix53.github.io/img/AI/ai_index_4.jpg">
 <meta property="article:published_time" content="2022-06-03T09:27:15.000Z">
-<meta property="article:modified_time" content="2022-06-03T09:46:10.863Z">
+<meta property="article:modified_time" content="2022-06-03T12:08:10.441Z">
 <meta property="article:author" content="Matrix53">
 <meta property="article:tag" content="逻辑,技术,IT,思维,前端,美">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          210 字
+          640 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          2 分钟
+          6 分钟
         
       </span>
     
@@ -285,7 +285,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年6月3日 下午
+                    本文最后更新于：2022年6月3日 晚上
                   
                 
               </p>
@@ -295,21 +295,37 @@
               <h2 id="前言">前言</h2>
 <p>这个系列的博客将作为我机器学习课程的笔记，部分用中文较难表述的词句我将使用英文原文。</p>
 <p>第 4
-周的课程标题是神经网络的表示，介绍了最基础的神经网络及其应用，本周的内容比较少。</p>
+周的课程标题是神经网络的表示，介绍了最基础的神经网络及其应用，本周的内容比较少，仅涉及到<strong>全连接层</strong>和<strong>激活函数层</strong>。</p>
 <h2 id="神经网络">神经网络</h2>
-<div class="note note-info">
-            <p>TODO</p>
-          </div>
+<p><strong>引入神经网络的动机：</strong>当输入数据(这里仅考虑向量)的维度较大时，很难给出待定函数的表达式，因为表达式的最高次项的阶数难以确定。于是，研究者们考虑使用具有固定数量参数的神经网络，来学习目标函数。</p>
+<p><strong>神经网络的表示：</strong>记<span
+class="math inline">\(g\)</span>为<span
+class="math inline">\(sigmoid\)</span>函数，<span
+class="math inline">\(\Theta^{(i)}\)</span>为第<span
+class="math inline">\(i\)</span>层的参数矩阵，<span
+class="math inline">\(a^{(i)}\)</span>为第<span
+class="math inline">\(i\)</span>层的输入向量，则有：</p>
+<p><span class="math display">\[
+a^{(i+1)}=g\left(\Theta^{(i)}a^{(i)}\right)
+\]</span></p>
+<p>在上式中，<span class="math inline">\(a_0^{(i)}\)</span>(第<span
+class="math inline">\(i\)</span>层输入向量的第<span
+class="math inline">\(1\)</span>个分量)恒等于<span
+class="math inline">\(1\)</span>，故这里不需要再加上偏置向量。</p>
 <h2 id="神经网络的简单应用">神经网络的简单应用</h2>
-<div class="note note-info">
-            <p>TODO</p>
-          </div>
+<p><strong>本节第一部分</strong>展示了使用神经网络完成与门、或门、异或门的功能，网络非常简单，在此不再列出。</p>
+<p><strong>本节第二部分</strong>给出了使用神经网络解决多类分类问题的一个例子，粗略讲解了一个图像分类的神经网络。</p>
 <h2 id="相关链接">相关链接</h2>
 <ul>
-<li>Coursera：Andrew Ng<a
-target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning">机器学习课程</a></li>
-<li>知乎：<a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104355127">常用聚类算法</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning">Andrew Ng
+机器学习课程</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/463666907">理解图神经网络：从
+CNN 到 GNN</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/30844905">一文搞懂
+RNN（循环神经网络）基础篇</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://www.zhihu.com/question/320174043/answer/651998472">深度学习中
+Attention 与全连接层的区别何在</a></li>
 </ul>
 <p>由于作者水平有限，所以文章中难免有少数不严谨之处，如有读者发现此类疏忽，恳请读者指出。另外，如果认为本文对您有帮助，欢迎请作者喝咖啡！<img
 src="/img/global/wxQRcode_pay.png" srcset="/img/loading.gif" lazyload alt="Matrix53的微信赞赏码" /></p>
